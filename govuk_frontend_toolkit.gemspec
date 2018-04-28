@@ -1,14 +1,14 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-require "govuk_frontend_toolkit/version"
+require "idsk_frontend_toolkit/version"
 
 Gem::Specification.new do |s|
-  s.name         = "govuk_frontend_toolkit"
-  s.version      = GovUKFrontendToolkit.toolkit_version
+  s.name         = "idsk_frontend_toolkit"
+  s.version      = IDSKFrontendToolkit.toolkit_version
   s.summary      = 'Tools for building frontend applications'
-  s.authors      = ["Government Digital Service"]
-  s.email        = ["govuk-dev@digital.cabinet-office.gov.uk"]
-  s.homepage     = 'https://github.com/alphagov/govuk_frontend_toolkit'
+  s.authors      = ["Ernest Walzel", "Government Digital Service"]
+  s.email        = ["ernest.walzel@slovensko.digital", "govuk-dev@digital.cabinet-office.gov.uk"]
+  s.homepage     = 'https://github.com/id-sk/idsk_frontend_toolkit'
   s.license      = 'MIT'
 
   s.add_dependency "railties", ">= 3.1.0"

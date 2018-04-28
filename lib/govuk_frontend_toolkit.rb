@@ -1,4 +1,4 @@
-module GovUKFrontendToolkit
-  require 'govuk_frontend_toolkit/engine'
-  autoload 'Version', 'govuk_frontend_toolkit/version'
+module IDSKFrontendToolkit
+  require 'idsk_frontend_toolkit/engine'
+  autoload 'Version', 'idsk_frontend_toolkit/version'
 end

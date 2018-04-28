@@ -4,11 +4,11 @@ branches:
   only:
     - master
 before_install:
-  - openssl aes-256-cbc -K $encrypted_1c9807165ece_key -iv $encrypted_1c9807165ece_iv -in .travis/govuk_frontend_toolkit_gem_push.enc -out ~/.ssh/id_rsa -d
+  - openssl aes-256-cbc -K $encrypted_1c9807165ece_key -iv $encrypted_1c9807165ece_iv -in .travis/idsk_frontend_toolkit_gem_push.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
   - git config --global user.name "GOV.UK Design System CI"
   - git config --global user.email "design-system-pipeline@digital.cabinet-office.gov.uk"
-  - git remote add origin_ssh git@github.com:alphagov/govuk_frontend_toolkit_gem.git
+  - git remote add origin_ssh git@github.com:id-sk/idsk_frontend_toolkit_gem.git
 install:
   - echo "No dependencies to install"
 script:
@@ -17,7 +17,7 @@ deploy:
   provider: rubygems
   api_key:
     secure: G1jZasAAUiHjZji6jbASaD1C41qXjpFNz58NEvw0EjgtM49qW062Qwjo6TcG83gYLUAq19WDDS3xrqqsDj4T/s84cpQcjqrZebgbZq2HqM4KepiRFOIzqJYTq2Lrl7ZdMqFKp+EUfo2WSRZQv94K+RyQqTAnLEyZB5zpfV/H+ok=
-  gem: govuk_frontend_toolkit
+  gem: idsk_frontend_toolkit
   on:
     branch: master
-    repo: alphagov/govuk_frontend_toolkit_gem
+    repo: id-sk/idsk_frontend_toolkit_gem
