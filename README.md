@@ -1,10 +1,10 @@
-# GOV.UK Frontend Toolkit
+# ID-SK Frontend Toolkit
 
-A gem wrapper around the [govuk_frontend_toolkit](http://github.com/alphagov/govuk_frontend_toolkit).
+A gem wrapper around the [idsk_frontend_toolkit](http://github.com/id-sk/idsk_frontend_toolkit).
 
 ## Installing
 
-Just include `govuk_frontend_toolkit` in your `Gemfile`. It
+Just include `idsk_frontend_toolkit` in your `Gemfile`. It
 automatically attaches itself to your asset path so the static/SCSS
 files will be available to the asset pipeline.
 
@@ -12,7 +12,7 @@ files will be available to the asset pipeline.
 
 If you are installing from git, ensure you enable submodules like so:
 
-    gem 'govuk_frontend_toolkit', :git => "https://github.com/alphagov/govuk_frontend_toolkit_gem.git", :submodules => true
+    gem 'idsk_frontend_toolkit', :git => "https://github.com/id-sk/idsk_frontend_toolkit_gem.git", :submodules => true
 
 You will need to check that the gem is included while in development. Often
 asset related gems are in a bundler group called `assets`. Old Rails projects
@@ -52,10 +52,10 @@ conditionals and typography mixins you should add:
 ## Updating the version of the toolkit that's included with the gem
 
 You shouldn't need to touch this repository. New versions are published automatically
-based on the `VERSION.txt` in [the frontend toolkit repo][govuk_frontend_toolkit].
+based on the `VERSION.txt` in [the frontend toolkit repo][idsk_frontend_toolkit].
 
 ## Licence
 
 Released under the MIT Licence, a copy of which can be found in the file `LICENCE`.
 
-[govuk_frontend_toolkit]: https://github.com/alphagov/govuk_frontend_toolkit
+[idsk_frontend_toolkit]: https://github.com/id-sk/idsk_frontend_toolkit
