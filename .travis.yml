@@ -4,10 +4,10 @@ branches:
   only:
     - master
 before_install:
-  - openssl aes-256-cbc -K $encrypted_1c9807165ece_key -iv $encrypted_1c9807165ece_iv -in .travis/idsk_frontend_toolkit_gem_push.enc -out ~/.ssh/id_rsa -d
+  - openssl aes-256-cbc -K $encrypted_2e58adf15eb3_key -iv $encrypted_2e58adf15eb3_iv -in .travis/idsk_frontend_toolkit_gem_push.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
-  - git config --global user.name "GOV.UK Design System CI"
-  - git config --global user.email "design-system-pipeline@digital.cabinet-office.gov.uk"
+  - git config --global user.name "ID-SK CI"
+  - git config --global user.email "ernest.walzel+idsk@slovensko.digital"
   - git remote add origin_ssh git@github.com:id-sk/idsk_frontend_toolkit_gem.git
 install:
   - echo "No dependencies to install"
@@ -16,7 +16,7 @@ script:
 deploy:
   provider: rubygems
   api_key:
-    secure: G1jZasAAUiHjZji6jbASaD1C41qXjpFNz58NEvw0EjgtM49qW062Qwjo6TcG83gYLUAq19WDDS3xrqqsDj4T/s84cpQcjqrZebgbZq2HqM4KepiRFOIzqJYTq2Lrl7ZdMqFKp+EUfo2WSRZQv94K+RyQqTAnLEyZB5zpfV/H+ok=
+    secure: "WRGcuMrT3LF23QnJIx7d6UiinTfmbT/FLyrVNaBvzi8mvShTpS+kJYd95+weH6QoUFmBVmIgTIsltoyQz/1tlBT62TdoRReTVtcdSBGeCW2Jt/8YBTjRUbO5/F9C0crIDl3z+ZG5p+DIiBE4yHwb1Z+cxOkcCEISHthpEm04pXsUUF/3BHfQ4TvE4JY1mynqHGeWRErON2cXQOEooQ+PoDUbbUNZEB2IJ8tpVeM2L/Tm2aJqB986c6H8SZ2C55ntdWh5hGCd3cTWf7Cd4fEEifeLXuVevuEw/ddtBV7uVc4FLTsRnIjaJCUUzebS19wYyazpnKW+BrVHH+vZmQBzliOs4OiE/XhshQqS6ASTLwTTeRvxntbCct5OVBNnvcDjoZaBKMA21misa/Eh0BFzAnOyaX4g8BdT+pL7pQkECg9qo7yayZ1Q//Aj3AYJQFslKW+fNsEWr9daC6ba9rAmAMI0KK4hZxmleNtLPFkv37h43aKx2oruGFs5dUL633ZmRzl9l/vkPkd9Xd8hah1/3yK3Hkqzf6BExp8/g3AjLoMUcoeu264Z/5MJKMFSFiDZICjA+i7VT+AI1FbKhEtOkasKaVc7vS6d0oCGZ6XQlxfF1FePdDntwknnEa2u6udvqiStH9sEe5oCSNXm6vkcrVhayVN3QYQ9mP3xlmb2dFQ="
   gem: idsk_frontend_toolkit
   on:
     branch: master
